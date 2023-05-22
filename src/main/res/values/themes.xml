@@ -8,6 +8,9 @@
     <style name="Base.Theme.Medic.ButtonLogin">
         <item name="android:background">@drawable/button_login</item>
     </style>
+    <style name="Base.Theme.Medic.ButtonPass">
+        <item name="android:background">@drawable/crug_btn</item>
+    </style>
 
     <style name="Theme.Medic" parent="Base.Theme.Medic" />
 </resources>
