@@ -21,7 +21,9 @@ public class code_email extends AppCompatActivity {
         setContentView(R.layout.activity_code_email);
         EditText code_input = findViewById(R.id.code_input);
         String code = "1234";
+
         TextView retry = findViewById(R.id.retry);
+        retry.setEnabled(true);
         code_input.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
