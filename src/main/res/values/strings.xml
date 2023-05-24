@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Medic</string>
+    <string-array name="pol">
+        <item>Мужской</item>
+        <item>Женский</item>
+    </string-array>
 </resources>

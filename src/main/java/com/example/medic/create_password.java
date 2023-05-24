@@ -107,7 +107,7 @@ public class create_password extends AppCompatActivity {
                     password, Toast.LENGTH_SHORT);
             toast.show();
             if (password.length() == 4) {
-                Intent pass = new Intent(create_password.this, login.class);
+                Intent pass = new Intent(create_password.this, create_client.class);
                 create_password.this.startActivity(pass);
                 create_password.this.finish();
             }
