@@ -107,7 +107,8 @@
             android:background="@drawable/em_input"
             android:hint="Пол"/>
         <Button
-            android:id="@+id/cbutt"
+            android:id="@+id/cbutton"
+            android:fontFamily="@font/sfpro_bold"
             android:layout_width="370dp"
             android:layout_height="56dp"
             android:layout_marginTop="48dp"
