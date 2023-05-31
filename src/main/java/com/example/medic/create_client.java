@@ -24,15 +24,18 @@ public class create_client extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_client);
-        Button cbutt = findViewById(R.id.cbutt);
+
+
+        Button cbutt = findViewById(R.id.cbutton);
+        //Button cbutt = findViewById(R.id.cbutt);
         cbutt.setEnabled(false);
         EditText c_name = findViewById(R.id.c_name);
         setTextEv(c_name);
         setTextEv(findViewById(R.id.c_otch));
         setTextEv(findViewById(R.id.c_fam));
         setTextEv(findViewById(R.id.c_birth));
-        Spinner spin = findViewById(R.id.c_pol);
-        spin.get
+        //Spinner spin = findViewById(R.id.c_pol);
+
     }
 
 
@@ -54,6 +57,13 @@ public class create_client extends AppCompatActivity {
                     a++;
                 }else{
                     a--;
+                }
+                if(a == 4){
+                    Button cbutt = findViewById(R.id.cbutton);
+                    cbutt.setEnabled(true);
+                }else{
+                    Button cbutt = findViewById(R.id.cbutton);
+                    cbutt.setEnabled(false);
                 }
             }
         });

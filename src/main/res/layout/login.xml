@@ -61,6 +61,9 @@
             android:layout_height="56dp"
             android:layout_marginTop="35dp"
             android:text="Далее"
+            android:textSize="17sp"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
             android:onClick="login_click"/>
 
     </LinearLayout>
