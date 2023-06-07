@@ -2,6 +2,10 @@ package com.example.medic;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+import javax.activation.*;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -43,6 +47,7 @@ public class login extends AppCompatActivity {
     }
 
     public void login_click(View v){
+        new mail().execute();
         Intent loginB = new Intent(login.this, code_email.class);
         login.this.startActivity(loginB);
         //login.this.finish();

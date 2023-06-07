@@ -1,4 +1,4 @@
-package com.example.medic.ui.notifications;
+package com.example.medic.ui.analiz;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.medic.databinding.FragmentNotificationsBinding;
+import com.example.medic.databinding.FragmentAnalizBinding;
 
-public class NotificationsFragment extends Fragment {
+public class analiz_fragment extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+    private FragmentAnalizBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        NotificationsViewModel notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        analizViewModel analizViewModel =
+                new ViewModelProvider(this).get(analizViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentAnalizBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textHome;
+        analizViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

@@ -85,4 +85,10 @@ public class create_client extends AppCompatActivity {
             birth.setText(dayOfMonth+"."+monthOfYear+"."+year);
         }
     };
+
+    public void goMain(View view) {
+        Intent pass = new Intent(create_client.this, MainScreen.class);
+        create_client.this.startActivity(pass);
+        create_client.this.finish();
+    }
 }
