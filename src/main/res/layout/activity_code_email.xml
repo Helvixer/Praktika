@@ -18,6 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textColor="@color/black"
             android:text="Введите код из E-mail"
             android:textSize="17sp"
             android:textStyle="bold" />

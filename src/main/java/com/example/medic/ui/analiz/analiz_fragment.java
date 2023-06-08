@@ -4,12 +4,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.medic.R;
 import com.example.medic.databinding.FragmentAnalizBinding;
 
 public class analiz_fragment extends Fragment {
@@ -24,9 +28,14 @@ public class analiz_fragment extends Fragment {
         binding = FragmentAnalizBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        analizViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        //final TextView textView = binding.textHome;
+        //analizViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
     }
 
     @Override

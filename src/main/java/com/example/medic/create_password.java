@@ -131,5 +131,10 @@ public class create_password extends AppCompatActivity {
             }
         }
 
+    public void skipPass(View view) {
+        Intent pass = new Intent(create_password.this, create_client.class);
+        create_password.this.startActivity(pass);
+        create_password.this.finish();
     }
+}
 

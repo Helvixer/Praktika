@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,8 +24,8 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.login);
         Button btn = findViewById(R.id.login_btn);
         btn.setEnabled(false);
-        EditText mail = findViewById(R.id.email_input);
-        mail.addTextChangedListener(new TextWatcher() {
+        EditText mail_s = findViewById(R.id.email_input);
+        mail_s.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -47,9 +48,16 @@ public class login extends AppCompatActivity {
     }
 
     public void login_click(View v){
-        new mail().execute();
+        EditText str = findViewById(R.id.email_input);
+        Random rand = new Random();
+        int code = rand.nextInt(8000) + 1000;
+        Log.e("Log","Лог: " + Integer.toString(code));
+        new mail().execute(str.getText().toString(), Integer.toString(code));
         Intent loginB = new Intent(login.this, code_email.class);
-        login.this.startActivity(loginB);
+        loginB.putExtra("mail", str.getText().toString());
+        loginB.putExtra("code", code);
+        startActivity(loginB);
+
         //login.this.finish();
     }
 }

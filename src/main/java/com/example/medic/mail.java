@@ -1,6 +1,7 @@
 package com.example.medic;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.util.Properties;
 import java.util.Random;
@@ -16,7 +17,8 @@ import javax.mail.internet.MimeMessage;
 public class mail extends AsyncTask<String, Void, Void> {
 
     @Override
-    protected Void doInBackground(String... strings) {
+    protected Void doInBackground(String... mail_str) {
+        Log.e("Log", "Лог: "+ mail_str[1]);
         final String username = "dospoker";
         final String password = "типа пароль";
 
@@ -37,16 +39,16 @@ public class mail extends AsyncTask<String, Void, Void> {
                 });
 
         try {
-
+            //System.out.println(mail_str[0]);
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress("dospoker@yandex.ru"));
             message.setRecipients(
                     Message.RecipientType.TO,
-                    InternetAddress.parse("helvixer@gmail.com")
+                    InternetAddress.parse(mail_str[0])
             );
             message.setSubject("Проверочный код для Medic");
-            Random rand = new Random();
-            int code = rand.nextInt(8000) + 1000;
+            //Random rand = new Random();
+            String code = mail_str[1];
             message.setText("Ваш код проверки: "+ code);
 
             Transport.send(message);

@@ -91,4 +91,10 @@ public class create_client extends AppCompatActivity {
         create_client.this.startActivity(pass);
         create_client.this.finish();
     }
+
+    public void skipCard(View view) {
+        Intent pass = new Intent(create_client.this, MainScreen.class);
+        create_client.this.startActivity(pass);
+        create_client.this.finish();
+    }
 }

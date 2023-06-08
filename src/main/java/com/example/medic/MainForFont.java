@@ -8,5 +8,6 @@ public class MainForFont extends Application {
     public void onCreate() {
         super.onCreate();
         TypefaceUtil.overrideFont(getApplicationContext(), "SANS_SERIF", "font/sfpro_h.otf");
+        new Database();
     }
 }
