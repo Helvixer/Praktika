@@ -52,7 +52,7 @@ public class login extends AppCompatActivity {
         Random rand = new Random();
         int code = rand.nextInt(8000) + 1000;
         Log.e("Log","Лог: " + Integer.toString(code));
-        new mail().execute(str.getText().toString(), Integer.toString(code));
+        //new mail().execute(str.getText().toString(), Integer.toString(code));
         Intent loginB = new Intent(login.this, code_email.class);
         loginB.putExtra("mail", str.getText().toString());
         loginB.putExtra("code", code);
